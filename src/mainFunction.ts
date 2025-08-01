@@ -43,7 +43,7 @@ async function main ()
 
 //filter tasks by user
         const getTaskByUser = (tasks: ITask[], userId: number): ITask[] => {
-       return tasks.filter(task => task.assignee?.id === userId);}
+       return tasks.filter(task=>task.assignee);}
 
 // paginate and log first page
     const pageSize = 2;
