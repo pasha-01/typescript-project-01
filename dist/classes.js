@@ -41,10 +41,10 @@ class TaskManager {
     }
     //public users: IUser[] = [];
     addTask(task) {
-        // this.tasks.push(task);
+        this.tasks.push(task);
     }
     getTasksByStatus(status) {
-        return this.tasks;
+        return this.tasks.filter(task => task.status === status);
     }
     getTaskByUser(userId) {
         return this.tasks.filter(task => task.assignee && task.assignee.id === userId);

@@ -1,7 +1,7 @@
 import { IUser, ITask, taskStatus } from './interfaces.js';
 import { paginate } from './generics.js';
 import { Task, User, TaskManager } from './classes.js';
-export { fetchUsers, fetchTasks };
+export {  fetchUsers, fetchTasks };
 
 
 

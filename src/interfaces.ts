@@ -4,7 +4,6 @@ interface IUser
     id : number;
     name: string;
     email: string;
-   // tasks : string[];
 }
  interface ITask 
 {

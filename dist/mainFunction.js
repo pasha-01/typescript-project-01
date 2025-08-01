@@ -19,15 +19,14 @@ function main() {
         // Fetch users and tasks from the mock API
         const users = yield fetchUsers();
         const tasks = yield fetchTasks();
-        console.log(fetchUsers);
-        console.log(fetchTasks);
+        console.log("Users: ", users);
+        console.log("Tasks: ", tasks);
         //Assign tasks to users using Task class
         users.forEach(user => {
             tasks.forEach(task => {
-                if (!user.hasOwnProperty('tasks')) {
-                    user.tasks = [];
+                if (!task.assignee) {
+                    task.assignee = user;
                 }
-                user.tasks.push(task.title);
             });
         });
         // Use TaskManager and add tasks to it

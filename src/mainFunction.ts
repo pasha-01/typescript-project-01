@@ -11,21 +11,19 @@ async function main ()
     console.log("Fetching users and tasks...");
 
 // Fetch users and tasks from the mock API
-    const users: IUser[] = await fetchUsers();
+    const users: IUser [] = await fetchUsers();
     const tasks: ITask[] = await fetchTasks();
-    console.log(fetchUsers);
-    console.log(fetchTasks);
+    console.log("Users: ", users);
+    console.log("Tasks: ",tasks);
     
 //Assign tasks to users using Task class
-    users.forEach(user => {
-        tasks.forEach(task => {
-            if (!user.hasOwnProperty('tasks')) {
-                (user as any).tasks = [];
-            }
-
-                (user as any).tasks.push(task.title);
+        users.forEach(user => {
+            tasks.forEach(task => {
+                if (!task.assignee) {
+                    task.assignee = user;
+                }
+            });
         });
-    });
 // Use TaskManager and add tasks to it
         const taskManager = new TaskManager();
         tasks.forEach(task =>

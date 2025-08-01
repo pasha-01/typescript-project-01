@@ -14,5 +14,13 @@
   "devDependencies": {
     "typescript": "^5.8.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pasha-01/typescript-project-01.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pasha-01/typescript-project-01/issues"
+  },
+  "homepage": "https://github.com/pasha-01/typescript-project-01#readme",
   "description": ""
 }

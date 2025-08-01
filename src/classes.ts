@@ -52,11 +52,11 @@ class TaskManager
     //public users: IUser[] = [];
 
         addTask(task: ITask): void {
-           // this.tasks.push(task);
+           this.tasks.push(task);
         }
     
         getTasksByStatus(status : taskStatus): ITask[] {
-            return this.tasks;
+            return this.tasks.filter(task => task.status === status);
         }
 
         getTaskByUser(userId: number): ITask[] {
